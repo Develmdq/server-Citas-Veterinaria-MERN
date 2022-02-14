@@ -6,7 +6,11 @@ const app = express()
 
 connectionDB()
 
-app.use(cors())
+const optionsCors = {
+  origin: process.env.FRONTEND_URL,
+};
+
+app.use(cors(optionsCors));
 
 app.use(express.json({extended:true}))
 
