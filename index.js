@@ -10,8 +10,8 @@ app.use(cors())
 
 app.use(express.json({extended:true}))
 
-const PORT = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 app.use("/api/appointments", require("./routes/appointments"));
 
-app.listen(PORT, ()=>console.log('servidor ok'))
+app.listen(port, '0.0.0.0',()=>console.log('servidor ok'))
